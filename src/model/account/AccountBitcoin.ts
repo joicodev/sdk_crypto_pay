@@ -15,9 +15,9 @@ export class AccountBitcoin extends Account {
     keyPair: IKeyPair,
   ) {
     super(address, keyPair, {
-      name: "string",
-      symbol: "string",
-      networkType: "string",
+      name: "Bitcoin",
+      symbol: "BTC",
+      networkType: "",
       chainType: ChainType.BITCOIN
     });
   }

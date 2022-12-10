@@ -5,7 +5,7 @@ export interface IKeyPair {
   publicKey: Uint8Array;
 }
 
-export abstract class Account {
+export class Account {
    protected constructor(
     // The account address.
     public readonly address: string,

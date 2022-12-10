@@ -1,6 +1,6 @@
-import { AccountBitcoin } from "../model/AccountBitcoin";
+import { AccountBitcoin } from '../model';
 
 (() => {
   const account = AccountBitcoin.createNew();
-  console.log("privateKey", account)
+  console.log("address", account.address)
 })()

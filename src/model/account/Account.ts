@@ -1,26 +1,26 @@
-import { IChainType } from "./ChainTypes";
+import {IChainType} from '../ChainTypes';
 
 export interface IKeyPair {
   privateKey: Uint8Array;
   publicKey: Uint8Array;
 }
 
-export class Account {
-  constructor(
+export abstract class Account {
+   protected constructor(
     // The account address.
     public readonly address: string,
     //The account keyPair, public and private key.
     private readonly keyPair: IKeyPair,
     // public ready
     public readonly chainType: IChainType
-  ) { }
+  ) {}
 
-  get publicKey(): string {
-    return this.keyPair.publicKey.toString();
+  get publicKey(): Uint8Array {
+    return this.keyPair.publicKey;
   }
 
-  get privateKey(): string {
+  get privateKey(): Uint8Array {
     // return convert.uint8ToHex(this.keyPair.privateKey);
-    return this.keyPair.privateKey.toString();
+    return this.keyPair.privateKey;
   }
 }

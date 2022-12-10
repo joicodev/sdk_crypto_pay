@@ -1,5 +1,5 @@
-import { Account, IKeyPair } from "./Account";
-import { ChainType } from "./ChainTypes";
+import { ChainType } from "../ChainTypes";
+import {Account, IKeyPair} from './Account';
 
 export class AccountBitcoin extends Account {
   /**

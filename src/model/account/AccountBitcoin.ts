@@ -1,5 +1,6 @@
-import { ChainType } from "../ChainTypes";
+import {ChainType} from "../ChainTypes";
 import {Account, IKeyPair} from './Account';
+import {Crypto} from "../../core/Crypto";
 
 export class AccountBitcoin extends Account {
   /**
@@ -22,15 +23,21 @@ export class AccountBitcoin extends Account {
     });
   }
 
-  static createNew() {
-    const keyPair = []
-    return new AccountBitcoin(
-      "1234567",
-      {
-        publicKey: new Uint8Array(64),
-        privateKey: new Uint8Array(64),
-      },
-    );
+  static generateNewAccount() {
+    return "";
   }
+
+
+
+  // static createNew() {
+  //   const keyPair = []
+  //   return new AccountBitcoin(
+  //     "1234567",
+  //     {
+  //       publicKey: new Uint8Array(64),
+  //       privateKey: new Uint8Array(64),
+  //     },
+  //   );
+  // }
 }
 

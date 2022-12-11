@@ -1,6 +1,6 @@
 import { AccountBitcoin } from '../model';
 
 (() => {
-  const account = AccountBitcoin.createNew();
-  console.log("address", account.address)
+  const account = AccountBitcoin.randomMnemonic();
+  console.log("generateFromMnemonic", account)
 })()
